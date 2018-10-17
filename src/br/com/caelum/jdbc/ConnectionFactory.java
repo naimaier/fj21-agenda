@@ -11,7 +11,7 @@ public class ConnectionFactory {
 			//Registrar o driver. Exigencia do Tomcat 7+ para evitar vazamento de memória
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             
-			return DriverManager.getConnection("jdbc:mysql://localhost:3306/cursojsf", "root", "admin");
+			return DriverManager.getConnection("jdbc:mysql://localhost:3306/fj21", "root", "admin");
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
