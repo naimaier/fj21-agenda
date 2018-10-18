@@ -2,8 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ page
 	import="java.util.*,
-	java.text.*,
-	br.com.caelum.jdbc.dao.*,
+	java.text.*,br.com.caelum.agenda.dao.*,
 	br.com.caelum.jdbc.model.*"%>
 <!DOCTYPE html>
 <html>
