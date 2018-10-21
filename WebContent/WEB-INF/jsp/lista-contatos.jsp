@@ -13,9 +13,6 @@
 
 	<c:import url="cabecalho.jsp" />
 
-	<!-- cria o DAO -->
-	<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao" />
-
 	<table>
 		<tr>
 			<td>Nome</td>
@@ -25,7 +22,7 @@
 		</tr>
 
 		<!-- percorre contatos montando as linhas da tabela -->
-		<c:forEach var="contato" items="${dao.lista}" varStatus="id">
+		<c:forEach var="contato" items="${contatos}" varStatus="id">
 
 			<!-- Utilizando variável de status no c:forEach para colocar duas cores
 			diferentes em linhas pares e ímpares -->
