@@ -71,6 +71,33 @@ public class ContatoDao {
 		}
 	}
 	
+	public Contato getContato(Long id) {
+		String sql = "select * from contatos where id=?";
+		
+		try {
+			Contato contato = new Contato();
+			PreparedStatement stmt = connection.prepareStatement(sql);
+			stmt.setLong(1, id);
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				contato.setId(rs.getLong("id"));
+				contato.setNome(rs.getString("nome"));
+				contato.setEmail(rs.getString("email"));
+				contato.setEndereco(rs.getString("endereco"));
+				
+				Calendar data = Calendar.getInstance();
+				data.setTime(rs.getDate("dataNascimento"));
+				contato.setDataNascimento(data);
+			}
+			rs.close();
+			stmt.close();
+			return contato;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 	public void altera (Contato contato) {
 		String sql = "update contatos set nome=?, email=?,endereco=?,dataNascimento=? "
 				+ "where id=?";
