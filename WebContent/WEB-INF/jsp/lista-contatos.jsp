@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista Contatos</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
 		<tr>
 			<td>Nome</td>
 			<td>Email</td>
-			<td>Emdereco</td>
+			<td>Endereco</td>
 			<td>Data de Nascimento</td>
 		</tr>
 
@@ -42,7 +42,8 @@
 			</tr>
 		</c:forEach>
 	</table>
-
+	<br/>
+	<a href="novo-contato.jsp">Novo</a>
 	<c:import url="rodape.jsp" />
 </body>
 </html>
