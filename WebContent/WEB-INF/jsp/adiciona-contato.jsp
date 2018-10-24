@@ -20,7 +20,7 @@
 	
 	<h3>Novo Contato</h3>
 	<form action="mvc">
-		<input type="hidden" name="logica" value="AdicionaContatoLogic">
+		<input type="hidden" name="logica" value="AdicionaAlteraContatoLogic">
 		Nome: <input type="text" name="nome" value="${contato.nome}"><br/>
 		Endereco: <input type="text" name="endereco" value="${contato.endereco}"><br/>
 		Email: <input type="text" name="email" value="${contato.email}"><br/>

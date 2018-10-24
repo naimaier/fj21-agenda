@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
 </head>
 <body>
 	<img alt="Logotipo" src=<c:url value="/imagens/caelum.png"/> height="50" width="160" />

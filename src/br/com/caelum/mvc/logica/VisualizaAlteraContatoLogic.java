@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.caelum.agenda.dao.ContatoDao;
 import br.com.caelum.jdbc.model.Contato;
 
-public class AlterandoContatoLogic implements Logica {
+public class VisualizaAlteraContatoLogic implements Logica {
 
 	@Override
 	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {

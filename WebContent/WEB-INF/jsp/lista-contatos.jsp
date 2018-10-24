@@ -36,14 +36,14 @@
 				<td>${contato.endereco}</td>
 				<td><fmt:formatDate value="${contato.dataNascimento.time}"
 						pattern="dd/MM/yyyy" /></td>
-				<td><a href="mvc?logica=AlterandoContatoLogic&id=${contato.id}">Alterar</a>
+				<td><a href="mvc?logica=VisualizaAlteraContatoLogic&id=${contato.id}">Alterar</a>
 				<td><a href="mvc?logica=RemoveContatoLogic&id=${contato.id}">Remover</a>
 				</td>
 			</tr>
 		</c:forEach>
 	</table>
 	<br/>
-	<a href="novo-contato.jsp">Novo</a>
+	<a href="mvc?logica=VisualizaAdicionaContatoLogic">Novo</a>
 	<c:import url="rodape.jsp" />
 </body>
 </html>
