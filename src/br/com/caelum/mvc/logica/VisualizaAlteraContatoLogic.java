@@ -1,5 +1,7 @@
 package br.com.caelum.mvc.logica;
 
+import java.sql.Connection;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -12,7 +14,10 @@ public class VisualizaAlteraContatoLogic implements Logica {
 	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		Long id = Long.parseLong(req.getParameter("id"));
 		
-		Contato contato = new ContatoDao().getContato(id);
+		//busca a conexao pendurada na requisicao
+		Connection connection = (Connection) req.getAttribute("conexao");
+				
+		Contato contato = new ContatoDao(connection).getContato(id);
 		
 		req.setAttribute("contato", contato);
 		
